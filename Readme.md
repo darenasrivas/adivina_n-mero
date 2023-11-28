@@ -7,16 +7,6 @@ Para clonar el proyecto
 
 ```shell
 
-    git 
-
-```
-
-```php
-
-
-
-
-
-
+    git clone https://github.com/darenasrivas/adivina_numero.git
 
 ```
