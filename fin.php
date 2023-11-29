@@ -1,6 +1,13 @@
 <?php
 
+//Si mensaje tiene el valor de nulo, lleva a index.
+
 $msj = $_GET['msj'];
+
+if($msj===null){
+    header("location:index.php");
+    exit();
+}
 
 ?>
 

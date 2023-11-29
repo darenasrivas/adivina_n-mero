@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-
-    <meta name="viewport"
+    <meta name="viewport">
     <title>Adivina número</title>
     <link rel="stylesheet" href="css/estilo.css" type="text/css"/>
 </head>
@@ -28,9 +27,9 @@
 
     <h2> Cada vez que la aplicaci&oacuten te especifique un n&uacutemero deber&aacutes de indicar</h2>
     <ul>
-        <ol>Si el n&uacutemero buscado es mayor</ol>
-        <ol>Si el n&uacutemero buscado es menor</ol>
-        <ol>Si has aceertado el n&uacutemero</ol>
+        <li>Si el n&uacutemero buscado es mayor</li>
+        <li>Si el n&uacutemero buscado es menor</li>
+        <li>Si has acertado el n&uacutemero</li>
     </ul>
 
 </fieldset>
