@@ -4,11 +4,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
     <meta name="viewport"
-    <title>Adivina n&uacutemero</title>
+    <title>Adivina número</title>
     <link rel="stylesheet" href="css/estilo.css" type="text/css"/>
 </head>
 <body>
-
 
 <fieldset style="width: 50%;float:left;margin-left: 20%; background: bisque">
     <legend><h1>Juego adivina n&uacutemero</h1></legend>
@@ -33,7 +32,6 @@
         <ol>Si el n&uacutemero buscado es menor</ol>
         <ol>Si has aceertado el n&uacutemero</ol>
     </ul>
-
 
 </fieldset>
 </body>

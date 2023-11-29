@@ -1,5 +1,5 @@
 <?php
-//Declaro variables
+//Declaro variables. Las declaro en el momento que me interesa
 //$min=0;
 //$max=0;
 //$numero_propuesto=0;
@@ -7,27 +7,38 @@
 //$intentos=0;
 //$rtdo=0;
 
-
+//Si lo he metido por submit y si no por url, que será nulo
 $opcion = $_POST['submit'] ?? "Por url";
 switch ($opcion){
+    case "Reinciar":
     case "Empezar":
+        //Input
+        //Rango menor.
         $min =0;
+        //Número de intentos que le pasamos.
         $intentos = $_POST['intentos'];
+        //Número máximo 2 elevado al número de intentos. Rango mayor.
         $max = 2** $intentos;
+        //Procesamiento.
+        //Número en pantalla que ofrece la máquina. La suma del max y el min / 2
         $numero_propuesto=($min+$max)/2;
+        //Número de la jugada
         $jugada=1;
         break;
     case "Jugar":
-        //obtener valores de variables
+        //Obtener valores de variables y las guardamos en el hidden.
         $min = $_POST['min'];
         $max = $_POST['max'];
+        //Número de intentos que le pasamos.
         $intentos = $_POST['intentos'];
+        //Número de la jugada
         $jugada = $_POST['jugada'];
+        //Número que tenemos guardado en el hidden y que ha salido del caso empezar
         $numero_propuesto = $_POST['numero_propuesto'];
-        //Leer rtdo
+        //Leer rtdo. QUe sale del radio button
         $rtdo = $_POST['rtdo'];
 
-        //Actualizar min o max en funcion del resultado
+        //PROCESAMIENTO.Actualizar min o max en funcion del resultado
         switch ($rtdo){
             case ">":
                 $min = $numero_propuesto;
@@ -36,22 +47,26 @@ switch ($opcion){
                 $max = $numero_propuesto;
                 break;
             case "=":
-                break;
+                header ("location:fin.php?msj=Has acertado");
+                exit();
+                //TODO Falta implementar esta situación que será fin de juego
+
         }
-        //actualizar las variables $numero_propuesto $jugada
+        //actualizar las variables $numero_propuesto $jugada, porque no hemos salido por > o <
         $numero_propuesto = ($min+$max)/2;
+        //Aquí no es igual
         $jugada++;
-
-
+        //No es igual y los intentos es mayor
+        if($jugada>$intentos){
+            //Enviamos una variable con texto
+            header("location:fin.php?msj=Me has engañado");
+            exit();
+        }
         break;
     case "Volver":
-        break;
-    case "Reinciar":
-        break;
     default:
-
-
-
+        header ("location:index.php");
+        exit();
 
 }
 
@@ -70,6 +85,7 @@ switch ($opcion){
 <fieldset style="width:40%;background:bisque ">
     <legend>Empieza el juego</legend>
     <form action="jugar.php" method="POST" >
+        <!-- SALIDA -->
         <h2> El n&uacutemero es  <span style="color: blue"> <?=$numero_propuesto?></span> </h2>
         <h5> Jugada  <span style="color: blue"> <?=$jugada?></span>  </h5>
         <h5> Actualmente te quedan   <span style="color: blue"> <?=$intentos-$jugada?> </span> intentos </h5>
@@ -82,6 +98,7 @@ switch ($opcion){
             <input type="radio" name="rtdo" value='='> Igual<br />
         </fieldset>
         <hr />
+        <!-- Lo anoto todo para poder recuperarlo -->
         <input type="submit" value="Jugar" name="submit" >
         <input type="submit" value="Reiniciar" name="submit"  >
         <input type="submit" value="Volver" name="submit"  >
@@ -89,6 +106,7 @@ switch ($opcion){
         <input type="hidden" name="min" value="<?=$min?>">
         <input type="hidden" name="numero_propuesto" value="<?=$numero_propuesto?>">
         <input type="hidden" name="intentos" value="<?=$intentos?>">
+        <input type="hidden" name="jugada" value="<?= $jugada ?>">
 
 
     </form>
