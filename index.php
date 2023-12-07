@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport">
-    <title>Adivina número</title>
+    <title>Juego "Adivina número"</title>
     <link rel="stylesheet" href="css/estilo.css" type="text/css"/>
 </head>
 <body>
