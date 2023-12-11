@@ -6,10 +6,10 @@
     <title>Juego "Adivina número"</title>
     <link rel="stylesheet" href="css/estilo.css" type="text/css"/>
 </head>
-<body>
+<body>s
 
 <fieldset style="width: 50%;float:left;margin-left: 20%; background: bisque">
-    <legend><h1>Juego adivina n&uacutemero</h1></legend>
+    <legend><h1>**Juego adivina el número**</h1></legend>
     <h2> Selecciona un intervalo del men&uacute de abajo</h2>
     <fieldset>
         <legend>Esteblece interfalo</legend>
