@@ -78,6 +78,7 @@ switch ($opcion){
 <head>
     <meta charset="UTF-8">
     <title>Juego de adivina un número</title>
+    <link rel="stylesheet" href="css/estilo.css" type="text/css"/>
 </head>
 <body style="width: 60%;float:left;margin-left: 20%; ">
 
@@ -114,8 +115,3 @@ switch ($opcion){
 
 </body>
 </html>
-
-
-
-
-
