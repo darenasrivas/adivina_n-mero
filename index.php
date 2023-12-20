@@ -1,18 +1,21 @@
+
+<!-- Interfaz principal del juego -->
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport">
     <title>Juego "Adivina número"</title>
     <link rel="stylesheet" href="css/estilo.css" type="text/css"/>
 </head>
-<body>s
+<body>
 
 <fieldset style="width: 50%;float:left;margin-left: 20%; background: bisque">
     <legend><h1>**Juego adivina el número**</h1></legend>
-    <h2> Selecciona un intervalo del men&uacute de abajo</h2>
+    <h2> Selecciona un intervalo del menú de abajo</h2>
     <fieldset>
-        <legend>Esteblece interfalo</legend>
+        <legend>Esteblece intervalo</legend>
         <form action="jugar.php" method="POST">
             <input type="radio" name="intentos" value=10 checked> 1-1.024(2<sup>10</sup>). 10 intentos<br/>
             <input type="radio" name="intentos" value=15> 1-32.268(2<sup>15</sup>). 15 intentos<br/>
@@ -22,14 +25,14 @@
     </fieldset>
     <br/>
     <h2> Piensa un n&uacutemero de ese intervalo</h2>
-    <h2> La aplicaci&oacuten lo acertar&aacute en el n&uacutemero de intentos establecidos seg&uacuten el intervalo</h2>
+    <h2> La aplicación lo acertará en el nunmeró de intentos establecidos según el intervalo</h2>
     <hr/>
 
-    <h2> Cada vez que la aplicaci&oacuten te especifique un n&uacutemero deber&aacutes de indicar</h2>
+    <h2> Cada vez que la aplicación te especifique un número deberás de indicar:</h2>
     <ul>
-        <li>Si el n&uacutemero buscado es mayor</li>
-        <li>Si el n&uacutemero buscado es menor</li>
-        <li>Si has acertado el n&uacutemero</li>
+        <li>Si el número buscado es mayor</li>
+        <li>Si el número buscado es menor</li>
+        <li>Si has acertado el número</li>
     </ul>
 
 </fieldset>
